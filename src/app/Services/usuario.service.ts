@@ -14,7 +14,7 @@ import { Usuario } from "../Interfaces/usuario"
 })
 export class UsuarioService {
 
-  private urlAPI:string = environment.endpoint + "Usuario/"
+  private urlAPI:string = environment.endpoint + "Usuario/";
 
   constructor(private http:HttpClient) { }
 
@@ -28,6 +28,10 @@ export class UsuarioService {
 
   guardar(request: Usuario):Observable<ResponseApi> {
     return this.http.post<ResponseApi>(this.urlAPI + "Guardar", request)
+  }
+
+  editar(request: Usuario):Observable<ResponseApi> {
+    return this.http.put<ResponseApi>(this.urlAPI + "Editar", request)
   }
 
   eliminar(id: number):Observable<ResponseApi> {
