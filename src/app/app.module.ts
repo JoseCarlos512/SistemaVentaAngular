@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './Components/login/login.component';
 import { LayoutComponent } from './Components/Layout/layout.component';
+
 import { SharedModule } from './Reutilizable/shared/shared.module';
 
 @NgModule({
